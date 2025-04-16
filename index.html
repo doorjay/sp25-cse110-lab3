@@ -100,21 +100,46 @@
 
         <section>
             <h2 id="New Issues">New Issues</h2>
-            <p>None. Team Ate is <strong>perfect</strong> will <em>never</em>have any issues at all.</p>
+            <p>None. Team Ate is <strong>perfect</strong> will <br><span class="sarcasm"><em>never</em></span><br> have any issues at all.</p>
         </section>
             
-
-        
-
         <hr />
 
         <footer onsubmit="alert('Concern submitted, thank you for your consideration.')">
             <h3 id="Concerns">Concerns</h3>
             <form>
-                <input type="text" placeholder="Enter your concern" />
+                <fieldset> 
+                    <legend>Subject</legend>
+                    <input type="text" placeholder="Subject field" />
 
-                <button><b>Submit</b></button>
+                    <br>
+                    <br>
+
+                    <textarea name="Concerns" id="Concerns">Enter your concern</textarea>
+
+                    <button><b>Submit</b></button>
+                </fieldset>
+
+                <label for="immportance level">Choose an ice cream flavor</label>
+                <input list="flavors" id="immportance level" name="immportance level" />
+
+                <datalist id="flavors">
+                    <option value="Chocolate"></option>
+                    <option value="Not Chocolate"></option>
+                </datalist>
+
             </form>
+
+            <br>
+
+            <label for="pet">What kind of pet do you have?</label>
+            <select name="pet select" id="pet">
+                <option value="">- Please choose and option -</option>
+                <option value="cat">cat</option>
+                <option value="not-cat">not cat</option>
+
+            </select>
+
             
         </footer>
     </body>
