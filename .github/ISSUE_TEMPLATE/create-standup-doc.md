@@ -1,7 +1,7 @@
 ---
-name: Create standup doc
+name: Next Feature
 about: need to create and fill out a standup document
-title: Next Feature
+title: Standup doc
 labels: In Progress, Uh oh
 assignees: doorjay
 
