@@ -1,146 +1,143 @@
-<!DOCTYPE html> 
+<!-- index.html -->
+<!DOCTYPE html>  
 <html lang="en">
-    <head>
-        <title>Team Ate Meeting Minutes</title>
-        <meta charset="utf-8">
-        <link rel="icon" href="Pictures/TeamAteLittleGuy.png">
-    </head>
-    <body>
-        <header> 
-            <details>
-                <summary>Quick Links</summary>
+<head>
+  <meta charset="utf-8">
+  <title>Team Ate Meeting Minutes</title>
+  <link rel="icon" href="Pictures/TeamAteLittleGuy.png">
 
-                <nav>
-                    <ul>
-                        <li><a href="#Agenda">Agenda</a></li>
-                        <li><a href="#Date">Date</a></li>
-                        <li><a href="#Attendance">Attendance</a></li>
-                        <li><a href="#Follow-ups">Follow-ups</a></li>
-                        <li><a href="#New-Issues">New Issues</a></li>
-                        <li><a href="#Concerns">Concerns</a></li>
-                        <li><a href="#Diagrams">Diagrams</a></li>
-                        <li><a href="#Recording">Recording</a></li>
-                    </ul>
-                </nav>
-        </details>
-        </header>
+  <!-- 3rd-party font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-        <section>
-            <h1>Meeting 1</h1>
-            <h3>General Meeting</h3>
-            <h5 id="Date">April 12, 2024</h5>
-        </section>
+  <!-- external stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 
-        <section>
-            <h2 id="Agenda">Meeting Agenda</h2>
+  <!-- internal <style> example -->
+  <style>
+    /* highlight any element with .internal-highlight */
+    .internal-highlight {
+      background-color: rgba(255, 235, 59, 0.3); /* rgba example */
+      padding: 0.5em;                         /* relative unit */
+    }
+  </style>
+</head>
+<body>
+  <header> 
+    <details>
+      <summary>Quick Links</summary>
+      <nav>
+        <ul>
+          <li><a href="#Agenda">Agenda</a></li>
+          <li><a href="#Date">Date</a></li>
+          <li><a href="#Attendance">Attendance</a></li>
+          <li><a href="#Follow-ups">Follow-ups</a></li>
+          <li><a href="#New-Issues">New Issues</a></li>
+          <li><a href="#Concerns">Concerns</a></li>
+          <li><a href="#Diagrams">Diagrams</a></li>
+          <li><a href="#Recording">Recording</a></li>
+        </ul>
+      </nav>
+    </details>
+  </header>
 
-            <ol>
-                <li><input type="checkbox"> Check In</li>
-                <li><input type="checkbox"> Brainstorm Card Project</li>
-                <li><input type="checkbox"> Form Groups</li>
-            </ol>
-        </section>
+  <section>
+    <!-- inline‐style example -->
+    <h1 id="title" style="text-transform: uppercase; color: orange;">
+      Meeting 1
+    </h1>
+    <h3>General Meeting</h3>
+    <h5 id="Date">April 12, 2024</h5>
+  </section>
 
-        <section>
-            <h2 id="Attendance">Attendance</h2>
-            <details>
-                <summary>Attendees</summary>
-                <ul>
-                    <li><input type="checkbox"> Dorjé Pradhan</li>
-                    <li><input type="checkbox"> Ashley Vo</li>
-                    <li><input type="checkbox"> Changin Na</li>
-                    <li><input type="checkbox"> Phyo Thant</li>
-                    <li><input type="checkbox"> Kiet Dang</li>
-                    <li><input type="checkbox"> Arlene Garcia</li>
-                    <li><input type="checkbox"> Kiara Singh</li>
-                    <li><input type="checkbox"> Minahil Yasar</li>
-                    <li><input type="checkbox"> rrbhansali</li>
-                    <li><input type="checkbox"> Ryan Awal</li>
-                    <li><input type="checkbox"> sdudeja</li>
-                    <li><input type="checkbox"> sgebrekidan</li>
-                </ul>
-            </details>
+  <section>
+    <h2 id="Agenda">Meeting Agenda</h2>
+    <ol>
+      <li><input type="checkbox"> Check In</li>
+      <li><input type="checkbox"> Brainstorm Card Project</li>
+      <li><input type="checkbox"> Form Groups</li>
+    </ol>
+  </section>
 
-        </section>        
+  <section>
+    <h2 id="Attendance">Attendance</h2>
+    <details>
+      <summary>Attendees</summary>
+      <ul>
+        <li><input type="checkbox"> Dorjé Pradhan</li>
+        <!-- …etc… -->
+      </ul>
+    </details>
+  </section>        
 
-        <main>
-            <h2 id="Diagrams">Diagrams</h2>
-            <div>
-                <img 
-                    src="https://images.unsplash.com/photo-1533749871411-5e21e14bcc7d?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
-                    alt="diagram"
-                    width="500"
-                >
-            </div>
+  <!-- we’ll treat this as our grid container -->
+  <main class="grid-container">
+    <h2 id="Diagrams">Diagrams</h2>
+    <div>
+      <img src="https://images.unsplash.com/photo-1533749871411-5e21e14bcc7d?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.0.3" 
+           alt="diagram">
+    </div>
 
-            <h2 id="Recording">Meeting Recording</h2>
-            <video controls width="500">
-                <source src="Video/meeting_stock_vid.mp4" type="video/mp4">
-            </video>
-            
-            <br>
+    <h2 id="Recording">Meeting Recording</h2>
+    <video controls>
+      <source src="Video/meeting_stock_vid.mp4" type="video/mp4">
+    </video>
+    
+    <figure>
+      <figcaption>Listen to some nice, relaxing guitar</figcaption>
+      <audio controls src="Audio/relaxing-guitar-loop-v5-245859.mp3"></audio>
+    </figure>
+  </main>
 
-            <figure>
-                <figcaption>Listen to some nice, relaxing guitar</figcaption>
-                <audio controls src="Audio/relaxing-guitar-loop-v5-245859.mp3">
-                </audio>
-        </figure>
-        </main>
+  <section>
+    <h2 id="Follow-ups">Follow-ups</h2>
+    <ol>
+      <li><i>Complete Group Forms</i></li>
+    </ol>
+    <h4>Complete forms by:</h4>
+    <input type="date" value="2024-04-15">
+  </section>
 
-        <section>
-            <h2 id="Follow-ups">Follow-ups</h2>
-            <ol>
-                <li><i>Complete Group Forms</i></li>
-            </ol>
-            <h4>Complete forms by:</h4>
-            <input type="date" 
-                   value="2024-04-15" 
-            >
-        </section>
+  <section>
+    <h2 id="New-Issues">New Issues</h2>
+    <p>
+      None. Team Ate is <strong>perfect</strong>  
+      <span class="sarcasm"><em>never</em></span>  
+      have any issues at all.
+    </p>
+  </section>
+      
+  <hr>
 
-        <section>
-            <h2 id="New-Issues">New Issues</h2>
-            <p>None. Team Ate is <strong>perfect</strong> will <br><span class="sarcasm"><em>never</em></span><br> have any issues at all.</p>
-        </section>
-            
-        <hr>
+  <footer onsubmit="alert('Concern submitted, thank you for your consideration.')">
+    <h3 id="Concerns">Concerns</h3>
+    <form>
+      <fieldset class="form-fieldset">
+        <legend>Subject</legend>
+        <input type="text" placeholder="Subject field">
 
-        <footer onsubmit="alert('Concern submitted, thank you for your consideration.')">
-            <h3 id="Concerns">Concerns</h3>
-            <form>
-                <fieldset> 
-                    <legend>Subject</legend>
-                    <input type="text" placeholder="Subject field">
+        <br><br>
 
-                    <br>
-                    <br>
+        <textarea name="Concerns" id="concern-text">Enter your concern</textarea>
 
-                    <textarea name="Concerns" id="concern-text">Enter your concern</textarea>
+        <button><b>Submit</b></button>
+      </fieldset>
 
-                    <button><b>Submit</b></button>
-                </fieldset>
+      <label for="importance-level">Choose an ice cream flavor</label>
+      <input list="flavors" id="importance-level" name="importance-level">
+      <datalist id="flavors">
+        <option value="Chocolate"></option>
+        <option value="Not Chocolate"></option>
+      </datalist>
+    </form>
 
-                <label for="importance-level">Choose an ice cream flavor</label>
-                <input list="flavors" id="importance-level" name="importance-level">
+    <br>
 
-                <datalist id="flavors">
-                    <option value="Chocolate"></option>
-                    <option value="Not Chocolate"></option>
-                </datalist>
-
-            </form>
-
-            <br>
-
-            <label for="pet">What kind of pet do you have?</label>
-            <select name="pet select" id="pet">
-                <option value="">- Please choose and option -</option>
-                <option value="cat">cat</option>
-                <option value="not-cat">not cat</option>
-
-            </select>
-
-            
-        </footer>
-    </body>
+    <label for="pet">What kind of pet do you have?</label>
+    <select name="pet select" id="pet">
+      <option value="">- Please choose an option -</option>
+      <option value="cat">cat</option>
+      <option value="not-cat">not cat</option>
+    </select>
+  </footer>
+</body>
 </html>
