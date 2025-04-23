@@ -134,6 +134,12 @@ img, video, audio
     border-radius: 10px;
 }
 
+audio 
+{
+    width: 100%;     /* keep it responsive */
+    height: 2.5em;   /* or pick px/em that feels right */
+}
+  
 /*---------------------------------------------------
     FORMS & CONTROLS
 ---------------------------------------------------*/
