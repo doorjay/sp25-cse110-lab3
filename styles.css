@@ -7,9 +7,10 @@
 {
     --primary-color: #3498db;                           /* hex */
     --secondary-color: rgba(231, 76, 60, 0.8);          /* rgba */
-    --bg-color: hsl(210, 50%, 95%);                     /* hsl */
-    --accent-color: var(--nonexistent, #ff6347);        /* fallback to hex */
-    --widegamut-red: color(display-p3 1 0 0);           /* wider-gamut */
+    --bg-color: hsl(187, 60%, 79%);                     /* hsl */
+    --accent-color: var(--nonexistent, #b7ff75);        /* fallback to hex */
+    --widegamut-red: #ff0000;                           /* fallback for validator */
+    --widegamut-red: color(display-p3 1 0 0);             /* wider-gamut */
 }
   
 /*---------------------------------------------------
@@ -137,7 +138,7 @@ img, video, audio
 audio 
 {
     width: 100%;     /* keep it responsive */
-    height: 2.5em;   /* or pick px/em that feels right */
+    height: 2.5em;   
 }
   
 /*---------------------------------------------------
@@ -147,13 +148,16 @@ input[type="checkbox"]
 {
     accent-color: var(--accent-color);
 }
+
 input[type="date"] 
 {
     font-size: 12pt;                      /* absolute unit */
     color: color(display-p3 0.1 0.5 0.1);
 }
+
 button 
 {
+    background-color: #3498db;          /* fallback color-mix for validator and older brows*/
     background: color-mix(in srgb, var(--primary-color) 70%, blue 30%);
     border: 2px solid var(--secondary-color);
     border-radius: 5px;
