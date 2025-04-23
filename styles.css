@@ -32,3 +32,69 @@
     margin: auto;                        /* auto margins */
     line-height: 1.5;                    /* unitless */
   }
+
+  /*---------------------------------------------------
+   HEADER (margin longhand & shorthand)
+---------------------------------------------------*/
+header {
+    margin-top: 1cm;                      
+    margin-bottom: 1cm;                   
+    margin-left: 1cm;                     
+    margin-right: 1cm;
+    margin: auto 2cm;                     /* shorthand */
+    padding-top: 1rem;                    /* relative */
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding: 1em 2em;                     /* shorthand */
+    background-color: var(--primary-color);
+    border-style: solid;                  /* longhand */
+    border-width: 0.2cm;
+    border-color: #333;
+    border: 0.3cm solid #333;             /* shorthand */
+    border-radius: 0.5cm;
+    position: sticky;                     /* one of: static, relative, fixed, absolute, sticky */
+    top: 0;
+  }
+  
+  /*---------------------------------------------------
+    NAVIGATION (flex layout)
+  ---------------------------------------------------*/
+  nav ul {
+    display: flex;                        /* flexbox */
+    flex-direction: row;                  /* 3+ flex attrs */
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+  }
+  
+  /* list items inline-block & a inline */
+  nav ul li {
+    display: inline-block;                /* experiment with display */
+    margin: 0.5em;
+  }
+  nav ul li a {
+    display: inline;                      /* experiment */
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+  
+  /* pseudo-classes */
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  nav ul li a:active {
+    color: var(--secondary-color);
+  }
+  
+  /*---------------------------------------------------
+    TEXT ELEMENTS (element selector & selector list)
+  ---------------------------------------------------*/
+  h1, h2, h3 {
+    color: var(--secondary-color);        /* selector list */
+    text-align: center;
+  }
+  p {
+    color: var(--widegamut-red);          /* wider-gamut usage */
+  }
