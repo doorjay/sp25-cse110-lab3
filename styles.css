@@ -116,13 +116,44 @@ p
 ---------------------------------------------------*/
 .grid-container 
 {
-    display: grid;                        /* grid layout */
-    grid-template-columns: repeat(3, 1fr);/* 3+ grid attrs */
-    grid-template-rows: auto;
+    display: grid;
+    /* two equal columns: left for “Diagrams”, right for “Recording” */
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
     gap: 1rem;
+
+    grid-auto-flow: column;
+}
+
+/* place the “Diagrams” heading in column 1 */
+.grid-container > h2#Diagrams 
+{
+    grid-column: 1;
 }
   
-  
+/* place the “Recording” heading in column 2 */
+.grid-container > h2#Recording 
+{
+    grid-column: 2;
+}
+
+/* place the image (first <div>) under the Diagrams heading */
+.grid-container > div:first-of-type 
+{
+    grid-column: 1;
+}
+
+/* place the video under the Recording heading */
+.grid-container > video 
+{
+    grid-column: 2;
+}
+
+.grid-container > figure 
+{
+    grid-column: 1 / -1;
+}
+
 /*---------------------------------------------------
     MEDIA ELEMENT STYLING
 ---------------------------------------------------*/
