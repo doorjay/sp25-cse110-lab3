@@ -175,3 +175,75 @@ input[list]
 {
     background-color: #eee;
 }
+
+/*---------------------------------------------------
+    COMBINATORS
+---------------------------------------------------*/
+section h2 
+{                       /* descendant */
+    border-bottom: 1px dashed #999;
+}
+section > h4 
+{                     /* child */
+    color: var(--secondary-color);
+}
+h2 ~ p 
+{                          /* general sibling */
+    margin-top: 0.5rem;
+}
+h2 + ol 
+{                         /* adjacent sibling */
+    margin-top: 0.5rem;
+}
+
+/*---------------------------------------------------
+    ID & CLASS SELECTORS
+---------------------------------------------------*/
+#Date 
+{
+    font-style: italic;
+}
+.sarcasm 
+{                        /* combining element.class */
+    color: red;
+}
+
+/*---------------------------------------------------
+    :has() NEW PSEUDO-CLASS
+---------------------------------------------------*/
+footer:has(form) 
+{
+    background-color: hsla(120, 40%, 90%, 0.5);
+}
+
+/*---------------------------------------------------
+    NESTED SELECTORS (CSS Nesting Level 3)
+---------------------------------------------------*/
+nav 
+{
+    ul 
+    {
+        li 
+        {
+            &.active 
+            {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+/*---------------------------------------------------
+RESPONSIVE MEDIA QUERY
+---------------------------------------------------*/
+@media (max-width: 600px) 
+{
+    nav ul 
+    {
+        flex-direction: column;
+    }
+    body 
+    {
+        font-size: 90%;
+    }
+}
