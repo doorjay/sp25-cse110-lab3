@@ -3,27 +3,30 @@
 /*---------------------------------------------------
   CSS VARIABLES & FALLBACKS
 ---------------------------------------------------*/
-:root {
+:root 
+{
     --primary-color: #3498db;                           /* hex */
     --secondary-color: rgba(231, 76, 60, 0.8);          /* rgba */
     --bg-color: hsl(210, 50%, 95%);                     /* hsl */
     --accent-color: var(--nonexistent, #ff6347);        /* fallback to hex */
     --widegamut-red: color(display-p3 1 0 0);           /* wider-gamut */
-  }
+}
   
-  /*---------------------------------------------------
+/*---------------------------------------------------
     GLOBAL RESET + BOX-SIZING (universal selector)
-  ---------------------------------------------------*/
-  * {
+---------------------------------------------------*/
+* 
+{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
+}
   
-  /*---------------------------------------------------
+/*---------------------------------------------------
     BODY SETTINGS
-  ---------------------------------------------------*/
-  body {
+---------------------------------------------------*/
+  body 
+  {
     font-family: 'Roboto', sans-serif;  /* Google Font */
     background-color: var(--bg-color);
     color: #333;
@@ -33,10 +36,11 @@
     line-height: 1.5;                    /* unitless */
   }
 
-  /*---------------------------------------------------
+/*---------------------------------------------------
    HEADER (margin longhand & shorthand)
 ---------------------------------------------------*/
-header {
+header 
+{
     margin-top: 1cm;                      
     margin-bottom: 1cm;                   
     margin-left: 1cm;                     
@@ -54,12 +58,13 @@ header {
     border-radius: 0.5cm;
     position: sticky;                     /* one of: static, relative, fixed, absolute, sticky */
     top: 0;
-  }
+}
   
-  /*---------------------------------------------------
+/*---------------------------------------------------
     NAVIGATION (flex layout)
-  ---------------------------------------------------*/
-  nav ul {
+---------------------------------------------------*/
+nav ul 
+{
     display: flex;                        /* flexbox */
     flex-direction: row;                  /* 3+ flex attrs */
     justify-content: space-around;
@@ -67,34 +72,64 @@ header {
     flex-wrap: wrap;
     gap: 1rem;
     list-style: none;
-  }
-  
-  /* list items inline-block & a inline */
-  nav ul li {
+}
+
+/* list items inline-block & a inline */
+nav ul li 
+{
     display: inline-block;                /* experiment with display */
     margin: 0.5em;
-  }
-  nav ul li a {
+}
+nav ul li a 
+{
     display: inline;                      /* experiment */
     color: var(--accent-color);
     text-decoration: none;
-  }
-  
-  /* pseudo-classes */
-  nav ul li a:hover {
+}
+
+/* pseudo-classes */
+nav ul li a:hover 
+{
     text-decoration: underline;
-  }
-  nav ul li a:active {
+}
+nav ul li a:active 
+{
     color: var(--secondary-color);
-  }
-  
-  /*---------------------------------------------------
+}
+
+/*---------------------------------------------------
     TEXT ELEMENTS (element selector & selector list)
-  ---------------------------------------------------*/
-  h1, h2, h3 {
+---------------------------------------------------*/
+h1, h2, h3 
+{
     color: var(--secondary-color);        /* selector list */
     text-align: center;
-  }
-  p {
+}
+p 
+{
     color: var(--widegamut-red);          /* wider-gamut usage */
-  }
+}
+
+/*---------------------------------------------------
+    GRID LAYOUT
+---------------------------------------------------*/
+.grid-container 
+{
+    display: grid;                        /* grid layout */
+    grid-template-columns: repeat(3, 1fr);/* 3+ grid attrs */
+    grid-template-rows: auto;
+    gap: 1rem;
+}
+  
+  
+/*---------------------------------------------------
+    MEDIA ELEMENT STYLING
+---------------------------------------------------*/
+img, video, audio 
+{
+    max-width: 100%; 
+    height: auto;
+    display: block;                       /* experiment */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
